@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+
+        title Document
+    body
+        h2 Bienvenido
+        form(action="/genTest", method="GET")
+            button(type="submit" class="btn btn-success" ) Generar test
+        
+        div(class="container")
+            each folder in folders
+                div(class="row")
+                    h3!= folder
+                div(class="row")
+                    div(class="col-md-4")
+                        div(class="thumbnail")
+                            span(class="border border-primary")
+                            img(src='./'+folder+'/1.png' style="width:100%" border="5")
+                    div(class="col-md-4")
+                        div(class="thumbnail")
+                            img(src='./'+folder+'/2.png' style="width:100%" border="5")
+                    div(class="col-md-4")
+                        div(class="thumbnail")
+                            img(src='./'+folder+'/3.png' style="width:100%" border="5")
